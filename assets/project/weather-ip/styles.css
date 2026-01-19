@@ -1,0 +1,51 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align:center;
+  color: white;
+}
+body
+{
+  background: #1ca165;
+}
+.container-fluid
+{
+  width: 400px;
+  margin: 60px auto;
+  padding: 10px;
+}
+.display 
+{
+  text-align: center;
+  width: 400px;
+  color: #16a864;
+}
+.wrapper 
+{
+  margin: 0 9rem;
+  background-color: white;
+  height: 35vh;
+  margin: 50px auto;
+  border-radius: 2px;
+}
+
+.wrapper h2
+{
+  padding: 5px 0;
+  text-align: center;
+  background: #d14917;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+}
+.wrapper p
+{
+  margin:20px 50px;
+  text-align: center;
+  color: #0f6e42;
+  font-size:55px;
+}
