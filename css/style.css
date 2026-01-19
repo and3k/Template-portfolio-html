@@ -347,7 +347,6 @@ body {
   overflow: hidden; }
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {
-    color: #efedef;
     cursor: pointer;
     display: block;
     font-size: 1.1em;
