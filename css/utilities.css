@@ -105,6 +105,7 @@ h2::selection {
 
 /* Project cards */
 .card {
+  position: relative;
   padding: 1rem;
   background: var(--card-background);
   color: #ffffff;
@@ -119,7 +120,11 @@ h2::selection {
   font-size: 1.1rem;
   margin-right: 0.3rem;
 }
-
+.card-link{
+  position: absolute;
+  inset: 0;          /* covers the whole card */
+  z-index: 1;
+}
 .card a:hover {
   color: var(--primary-color);
 }
@@ -130,6 +135,7 @@ h2::selection {
 
 .card:hover .project-info {
   opacity: 1;
+  position: relative;
 }
 
 /* Project Images */
