@@ -124,6 +124,8 @@ h2::selection {
   position: absolute;
   inset: 0;          
   z-index: 1;
+  padding:5%;
+  margin:10%;
 }
 .card a:hover {
   color: var(--primary-color);
