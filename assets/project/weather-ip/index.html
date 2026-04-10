@@ -9,7 +9,13 @@
 <body>
  
   <div class="container-fluid">
-     <h1>Weather with your IP</h1>
+     <h1>Weather Application Programming Interface</h1>
+     <p>Enter a city and state to see the temperature</p>
+      <form id="weather-form">
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="state" placeholder="State" required>
+        <button type="submit">Get Weather</button>
+      </form>
       <section class="display">
         <div class="wrapper">
           <h2 id="cityoutput"></h2>

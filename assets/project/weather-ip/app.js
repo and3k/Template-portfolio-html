@@ -1,24 +1,45 @@
+async function getLatLng(city, state) {
+  const query = `${city}, ${state}`;
+  const url =
+    `https://nominatim.openstreetmap.org/search?` +
+    new URLSearchParams({
+      q: query,
+      format: "jsonv2",
+      limit: 1
+    });
 
+  const res = await fetch(url, {
+    headers: {
+      Accept: "application/json"
+    }
+  });
 
-async function fetchData() { 
-  const ipWho = "https://ipwho.is/"
-  const ipResponse = await fetch(ipWho)
-  const jsonIpData = await ipResponse.json()
-  const latitude = jsonIpData.latitude
-  const longitude = jsonIpData.longitude
-  const weatherURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&temperature_unit=fahrenheit&current_weather=true&,precipitation`
+  const data = await res.json();
+  
+  if (!data.length) {
+    throw new Error("No location found");
+  }
+
+  return {
+    lat: Number(data[0].lat),
+    lng: Number(data[0].lon),
+    label: data[0].display_name
+  };
+}
+
+async function fetchData(city, state) {
+  const { lat, lng } = await getLatLng(city, state);
+  const weatherURL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&temperature_unit=fahrenheit&current_weather=true&precipitation`;
   const response = await fetch(weatherURL);
   const jsonData = await response.json();
-  const temp = jsonData.current_weather.temperature
-  const city = jsonIpData.city
-  const state = jsonIpData.region
-  insertTemp(temp)
-  insertCity(city, state)
+  const temp = jsonData.current_weather.temperature;
+  insertTemp(temp);
+  insertCity(city, state);
 }
 
 function insertTemp(temp) {
   const tempP = document.querySelector("#temp")
-  tempP.innerText = `${temp} degrees`
+  tempP.innerText = `${temp}°F`
 }
 
 function insertCity(city, state){
@@ -27,7 +48,10 @@ function insertCity(city, state){
 
 }
 
-window.onload = () => {
-  fetchData()
-}
+document.getElementById("weather-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const city = document.getElementById("city").value.trim();
+  const state = document.getElementById("state").value.trim();
+  await fetchData(city, state);
+});
 
