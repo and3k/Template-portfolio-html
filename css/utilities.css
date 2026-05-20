@@ -88,7 +88,12 @@ h2::selection {
 
 .content-text {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 3rem 0;
+}
+
+.content-text h3,
+.content-text h4 {
+  color: var(--primary-color);
 }
 
 .content-text h2 {
@@ -97,12 +102,40 @@ h2::selection {
   transition: 0.2s ease-in-out;
 }
 
+.content-text h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  transition: 0.2s ease-in-out;
+  padding: .7rem;
+}
+
 .content-text p {
+  text-align: left;
   padding: 0.5rem;
   margin: 0 auto;
   max-width: 700px;
 }
+.content-text h4 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  transition: 0.2s ease-in-out;
+  padding-top: 2rem;
+  padding-bottom: .5rem;
+}
+.content-text a {
+  color: var(--text-color);
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
 
+.content-text .social img {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .content-text .social img {
+  filter: none;
+}
 /* Project cards */
 .card {
   position: relative;
