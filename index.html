@@ -34,12 +34,8 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png" />
   <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
   <link rel="manifest" href="assets/favicon/site.webmanifest" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/utilities.css" />
 </head>
@@ -58,14 +54,14 @@
           <li><a class="nav-link" href="#projects">PROJECTS</a></li>
           <li><a class="nav-link" href="#contact">CONTACT</a></li>
           <li><a class="nav-link" href="#about">ABOUT</a></li>
-            <a class="nav-link btn btn-primary" href="assets/Andrew_Kasten_CV.pdf">RESUME <i
-          class="fas fa-arrow-right"></i></a>
+          <a class="nav-link btn btn-primary" href="assets/Andrew_Kasten_CV.pdf">RESUME <i
+              class="fas fa-arrow-right"></i></a>
           <!-- Toggle switch -->
           <div class="theme-switch">
             <input type="checkbox" id="switch" />
             <label class="toggle-icons" for="switch">
-              <img class="moon" src="assets/moon.svg"  alt="moon"/>
-              <img class="sun" src="assets/sun.svg"  alt="sun"/>
+              <img class="moon" src="assets/moon.svg" alt="moon" />
+              <img class="sun" src="assets/sun.svg" alt="sun" />
             </label>
           </div>
           <!-- Hamburger menu -->
@@ -85,9 +81,8 @@
       <div class="content-text">
         <h2>I care more about <br>
           what is built than how</h2>
-        
       </div>
-    
+
       <!-- <a
           href="https://github.com/CommunityPro/portfolio-html"
           class="btn btn-secondary"
@@ -100,72 +95,93 @@
     <div class="content-text" id="about">
       <h3>About</h3>
       <p>
-        I'm here because I needed work that could provide better for my family. My previous work and experience—recently leading digital media at iTEE Global—were valuable and impactful but became mostly volunteer. I asked myself, how I could raise the bar. I picked something difficult yet achievable. 
-        </p>
-        <p>Code Platoon let me combine my creative and communications knowledge with software engineering. Now, I'm an early career full-stack developer looking for a team where the work makes a difference and encourages growth.
+        I'm here, because I want to provide better for my family. My previous work and experience were valuable and
+        rewarding but the focus shifted. I asked myself, how I could reach higher. I picked something difficult yet
+        achievable.
       </p>
-      </div>
+      <p>Code Platoon let me combine my creative and communications knowledge with software engineering. Now, I'm an
+        early career full-stack developer looking for a team where the work makes a meaningful impact.
+      </p>
+    </div>
   </section>
-  <article>
-    <div class="content-text" id="projects">
-      <h3> Impact Desk</h3>
-      <img class="project-image" src="assets/project/dash.webp" alt="Dashboard" />
-      <p>
-        ImpactDesk is a fundraising activity planner for nonprofit fundraising managers and development staff who need to organize donor meetings, visits, and events more efficiently. Users schedule relationship-building activities, filter them by day, and view addresses on an interactive map to plan routes.
-       </p>
-       <p>
-  Solo project, built as my Code Platoon capstone. React frontend with Material UI and React Leaflet, Django REST Framework backend, PostgreSQL, deployed on AWS EC2 with Docker.
-      </p>
-      <a href="https://github.com/andrewkasten/portfolio-site" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://impactdesk.andrewkasten.cv/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
-      
-        <h4>Purpose and Goal</h4>
-        <p> I've done nonprofit fundraising work, and tracking donor relationships, scheduled visits, and event logistics across spreadsheets and calendars gets messy fast — especially the visual piece of seeing where everyone is and planning a route between them. Working with nonprofits and churches over the years through trainings, meetings, and conversations gave me a clearer picture of what fundraising and development staff actually need day-to-day.
-        <p> I researched the role specifically before scoping the build — including how outreach actually breaks down day-to-day, which is why scheduling and routing are the app's center of gravity rather than donor data.
-
+  <section>
+    <article>
+      <div class="content-text" id="projects">
+        <h3> Impact Desk</h3>
+        <img class="project-image" src="assets/project/dash.webp" alt="Dashboard" />
+        <p>
+          ImpactDesk is a fundraising activity planner for nonprofit fundraising managers and development staff who need
+          to organize donor meetings, visits, and events more efficiently. Users schedule relationship-building
+          activities, filter them by day, and view addresses on an interactive map to plan routes.
         </p>
-          <p>I started with a planning document, a defined Minimal Viable Product(MVP), and rough page sketches before writing code.
-             </p>
+        <p>
+          Solo project, built as my Code Platoon capstone. React frontend with Material UI and React Leaflet, Django
+          REST Framework backend, PostgreSQL, deployed on AWS EC2 with Docker.
+        </p>
+        <a href="https://github.com/andrewkasten/portfolio-site" target="_blank"><i class="fab fa-github"></i>
+          GitHub</a>
+        <a href="https://impactdesk.andrewkasten.cv/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+
+        <h4>Purpose and Goal</h4>
+        <p> I've done nonprofit fundraising work, and tracking relationships, schedules, and events across spreadsheets
+          and calendars gets messy fast — especially the visual piece of seeing where everyone is and planning a route
+          between them. Working with nonprofits and churches over the years gave me a clearer picture of what
+          fundraising and development staff actually need day-to-day.
+        <p> I researched the role specifically before scoping the build — including how outreach actually breaks down
+          day-to-day, which is why scheduling and routing are the app's center of gravity rather than data.
+        </p>
+        <p>I started with a planning document, a defined Minimal Viable Product(MVP), and rough page sketches before
+          writing code.
+        </p>
         </p>
         <h4>Spotlight</h4>
-        <p> 
-          The hardest part of building the development scheduling page wasn't the core functions — it was the form. I designed it to handle scheduling, location lookup, contact linking, and validation in one screen, with twelve inputs total. The scope created cascading bugs, but the bigger problem was one I only saw after completing. 
-          
-          <p>Scheduling doesn't happen all at once in real life. A fundraiser knows the contact's name today, sets a meeting time tomorrow, and confirms the address sometimes a day before. One data model paired with one form was a good beginning, but it forced a person to know everything upfront. I'd redesign it now to match the actual workflow — partial records that fill in over time, with nullable fields and a plan for an "in-progress" state. It's a data model problem, not just a form problem.</p>
+        <p>
+          The hardest part of building the development scheduling page wasn't the core functionality — it was the form.
+          I designed it to handle scheduling, location lookup, contact linking, and validation in one form. It has
+          twelve inputs total. The scope created cascading bugs, but the bigger problem was one I only saw after
+          completing.
+
+        <p>Scheduling doesn't happen all at once in real life. A person knows a contact's name today, sets a meeting
+          time tomorrow, and confirms the address. One data model and one form is a good beginning, but it forces a
+          person to know everything upfront. I'd redesign it now to match better user workflow. Having partial records
+          that fill in over time, nullable fields and plan for "in-progress" states. The database and frontend can be
+          done very differently with this in mind. </p>
         </p>
         <h4>Lessons Learned</h4>
         <img class="project-image" src="assets/project/schedule.png" alt="Developments" />
-       <p> Two things I'd carry forward from this build: features are bigger than they look, and frontend choices are often backend choices in disguise.
-
+        <p> One thing I'd take from this build: features are bigger than they look, and choices for the visual and user
+          experience are often choices about the code not seen.
         <p>
-  Getting a map onto the screen is its own engineering problem. So is putting markers on it, adding address search, handling geocoding, and drawing routes. The apps I use every day — Reddit, Google Maps — are built from thousands of those small steps, each one solved separately. That changes how I plan now: decompose first, estimate from the parts, and finish one piece before starting the next. Every "small addition" interacts with what's already there.
-</p>
-  <p>
-  
-  Same principle on the frontend-backend split: I added geocoding to the development form thinking of it as a UX feature, and it turned into a backend conversation about coordinate fields, rate limits, and failure handling. The earlier I think about where the work actually lives, the cleaner the integration.
-</p>
-      
-    </div>
-
-
-  </article>
+          Getting a map onto the screen is its own engineering problem. So is putting markers on the map, an address
+          search, geocoding, gps location, and drawing routes. The apps we use every day are built from thousands of
+          small steps, each one solved separately. That will change how I plan: breakdown first, estimate the parts, and
+          finish one piece at a time.
+        </p>
+      </div>
+    </article>
+    <!-- <article>
+      <div class="content-text" id="projects">
+        <h3> Recipe</h3>
+      </div>
+    </article> -->
+  </section>
   <div class="content-text" id="contact">
     <h3>Contact</h3>
-  <a href="mailto:andrewkasten@proton.me">andrewkasten@proton.me</a>
-      <!-- Social links -->
-      <div class="social">
-        <!-- <a href="#" target="_blank"
+    <a href="mailto:andrewkasten@proton.me">andrewkasten@proton.me</a>
+    <!-- Social links -->
+    <div class="social">
+      <!-- <a href="#" target="_blank"
             ><img src="./assets/facebook-icon.svg" alt="Facebook"
           /></a> -->
-        <!-- <a href="#" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a> -->
-        <a href="https://www.linkedin.com/in/andrewkasten/" target="_blank"><img src="./assets/linkedin-icon.svg"
-            alt="LinkedIn" /></a>
-        <!-- <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a> -->
-        <!-- <a href="#" target="_blank"
+      <!-- <a href="#" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a> -->
+      <a href="https://www.linkedin.com/in/andrewkasten/" target="_blank"><img src="./assets/linkedin-icon.svg"
+          alt="LinkedIn" /></a>
+      <!-- <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a> -->
+      <!-- <a href="#" target="_blank"
             ><img src="./assets/hashnode-icon.svg" alt="Hashnode"
           /></a> -->
-      </div>
     </div>
+  </div>
   <!-- Projects -->
   <!-- <section id="projects" class="project-container container">
     <div class="division"></div>
@@ -179,8 +195,8 @@
         <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
         <div>
           <article class="project"> -->
-            <!-- Project 1 -->
-            <!-- <div class="card">
+  <!-- Project 1 -->
+  <!-- <div class="card">
               <a class="card-link" href="https://thezone-two.vercel.app/"
        aria-label="Blog project"></a>
               <div class="project-info">
@@ -194,8 +210,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Project 2 -->
-            <!-- <div class="card" >
+  <!-- Project 2 -->
+  <!-- <div class="card" >
               <a class="card-link" href="https://andrewkasten.cv/assets/project/weather-ip/index.html"
        aria-label="Open Weather IP project" ></a>
               <div class="project-info">
@@ -209,8 +225,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Porject 3 -->
-            <!-- <div class="card">
+  <!-- Porject 3 -->
+  <!-- <div class="card">
               <div class="project-info">
                 <div class="project-bio">
                   <h3>Movie Theater</h3>
@@ -223,8 +239,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Project 4 -->
-            <!-- <div class="card">
+  <!-- Project 4 -->
+  <!-- <div class="card">
               <a class="card-link" href="assets/project/holidayAPI-fs/fsAPI.html"
        aria-label="Open Weather IP project"></a>
               <div class="project-info">
@@ -238,8 +254,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Project 5 -->
-            <!-- <div href="" class="card">
+  <!-- Project 5 -->
+  <!-- <div href="" class="card">
               <div class="project-info">
                 <div class="project-bio">
                   <h3>Project Five</h3>
@@ -251,8 +267,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Project 6 -->
-            <!-- <div href="" class="card">
+  <!-- Project 6 -->
+  <!-- <div href="" class="card">
               <div class="project-info">
                 <div class="project-bio">
                   <h3>Project Six</h3>
@@ -264,7 +280,7 @@
                 </div>
               </div>
             </div> -->
-          <!-- </article>
+  <!-- </article>
         </div>
       </div>
       <div class="tab-2">
@@ -276,16 +292,16 @@
         </div>
       </div>
     </div> -->
-    <!-- html,css,javascript,stactic webpage,git,github,API, react,tailwind css,front end app, python,postgreSQL,django, Restful API, CRUD app, Authentication, AWS, -->
-    <!-- Data Structures and Algorithms, Database Architecture and SQL, Software Engineering Tools -->
-    <!-- Data Structures and Algorithms, Functional and Object-Oriented Programming) -->
-    <!-- (HTML, CSS, DOM Manipulation, and HTTP APIs) -->
-    <!-- Database -->
+  <!-- html,css,javascript,stactic webpage,git,github,API, react,tailwind css,front end app, python,postgreSQL,django, Restful API, CRUD app, Authentication, AWS, -->
+  <!-- Data Structures and Algorithms, Database Architecture and SQL, Software Engineering Tools -->
+  <!-- Data Structures and Algorithms, Functional and Object-Oriented Programming) -->
+  <!-- (HTML, CSS, DOM Manipulation, and HTTP APIs) -->
+  <!-- Database -->
   <!-- </section> -->
 
   <footer id="footer">
     <div class="container">
-      
+
       <!-- Attribution -->
       <div class="attribution">
         <a href="https://github.com/CommunityPro/portfolio-html" target="_blank" rel="noopener noreferrer">
