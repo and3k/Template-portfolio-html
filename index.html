@@ -115,7 +115,7 @@
           activities, filter them by day, and view addresses on an interactive map to plan routes.
         </p>
         <p>
-          Solo project, built as my Code Platoon capstone. React frontend with Material UI and React Leaflet, Django
+          Individual project for the Code Platoon capstone. React frontend with Material UI and React Leaflet, Django
           REST Framework backend, PostgreSQL, deployed on AWS EC2 with Docker.
         </p>
         <a href="https://github.com/andrewkasten/portfolio-site" target="_blank"><i class="fab fa-github"></i>
@@ -156,14 +156,38 @@
           search, geocoding, gps location, and drawing routes. The apps we use every day are built from thousands of
           small steps, each one solved separately. That will change how I plan: breakdown first, estimate the parts, and
           finish one piece at a time.
+        </p>        
+      </div>
+    </article>
+    <article>
+      <div class="content-text" id="projects">
+        <h3> Seasonal Recipe Card Generator</h3>
+        <img class="project-image" src="assets/project/recipe-card.png" alt="recipe card" />
+        <p>a personal-use app and design concept that turns a US state + meal type into a single-serving recipe grounded 
+          on what produce is actually in season in that region. Built to explore using AI as an embedded product, not a 
+          chat interface — the user makes simple choices, and the system handles prompting, grounding, and structured 
+          output behind the scenes.
+        </p>
+        <p>React and Tailwind frontend, Django REST Framework backend, Google Gemini with Pydantic-validated structured output, 
+          Pixabay and CalorieNinjas for image and calorie information. Deployed on AWS EC2.
+        </p>
+        <a href="https://recipes.andrewkasten.cv/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+        <h4>Purpose and Goal</h4>
+        <p>
+          This was built to explore AI integration into apps. Most consumer AI tools expect the user to produce their own AI output. That is a useful avenue but not the only AI use case. The recipe generator is a test of that concept. 
+        </p>
+        <h4>Spotlight</h4>
+        <p>
+          It was more difficult than I realized to get Gemini to return what I was asking without making it up. 
+          
+          So, I found a 50-state × 12-month dataset of seasonal produce to put into JSON. Then Gemini's recipe suggestions are anchored on what's actually in season based on region. Gemini can be required to return JSON through a Pydantic schema (name, ingredients, instructions, prep time, accent color). With this a React component can render the response easily with that structure.
+        </p>
+        <h4>Lessons Learned</h4>
+        <p>
+          LLMs are good at synthesizing information as apposed to creation. At first the AI returned plausible information that became more reliable after providing real information. When asked for an image url, it consistently returned a faked url - 404 not found. So, working with AI is not always a straight forward expectation. 
         </p>
       </div>
     </article>
-    <!-- <article>
-      <div class="content-text" id="projects">
-        <h3> Recipe</h3>
-      </div>
-    </article> -->
   </section>
   <div class="content-text" id="contact">
     <h3>Contact</h3>
