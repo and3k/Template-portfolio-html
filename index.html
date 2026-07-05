@@ -336,6 +336,42 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.42.2/+esm";
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (!prefersReducedMotion) {
+      document.documentElement.classList.add("motion-ready");
+
+      // Wait for images to finish loading so the page is at its final height
+      // before the observer starts — otherwise elements below the fold sit
+      // inside the shorter pre-image-load page and fire immediately.
+      window.addEventListener("load", () => {
+        let started = false;
+        const startObserving = () => {
+          if (started) return;
+          started = true;
+          inView(".content-text h3, .content-text p", (element) => {
+            animate(element, { opacity: [0, 1] }, { duration: 2.4 });
+          });
+        };
+
+        // Anything already on screen at load (e.g. the About heading) would
+        // otherwise fire the instant the observer attaches. Wait for an actual
+        // scroll first, so the fade-in only ever happens as a scroll reaction —
+        // with a timeout fallback in case the page never needs to scroll.
+        if (window.scrollY > 0) {
+          startObserving();
+        } else {
+          window.addEventListener("scroll", startObserving, { once: true, passive: true });
+          setTimeout(startObserving, 4000);
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

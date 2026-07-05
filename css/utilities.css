@@ -125,12 +125,13 @@ h2::selection {
   font-size: 2rem;
   line-height: 1.2;
   padding: 0.7rem;
-  animation: fade-in-bottom-normal 1s ease 0s 1 normal none;
 }
 
-/* Scroll-driven fade-in. @supports so browsers that don't
-   support scroll timelines  just render the heading normally
-   instead of leaving it stuck at opacity: 0. */
+/* Scroll-driven fade-in — replaced entirely by Motion's inView()+animate()
+   in index.html. Keeping both old rules here commented out for comparison.
+.content-text h3 {
+  animation: fade-in-bottom-normal 1s ease 0s 1 normal none;
+}
 @supports (animation-timeline: view()) {
   .content-text h3 {
     animation: fadeIn linear both;
@@ -138,11 +139,14 @@ h2::selection {
     animation-range: entry 0% cover 35%;
   }
 }
+*/
 
-@media (prefers-reduced-motion: reduce) {
-  .content-text h3 {
-    animation: none;
-  }
+/* Initial hidden state for the Motion-driven fade-in, scoped to a class the
+   script only adds once it has successfully loaded — so if the Motion CDN
+   is ever unreachable, content just stays visible instead of stuck invisible. */
+.motion-ready .content-text h3,
+.motion-ready .content-text p {
+  opacity: 0;
 }
 
 .content-text p {
